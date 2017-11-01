@@ -11,4 +11,4 @@ RUN tar -xzf apache-jmeter-3.3.tgz
 
 RUN git clone https://github.com/Devops-POC/Jmeter.git
 CMD ls
-RUN cd apache-jmeter-3.3/bin && ./jmeter.sh -n -t /Jmeter/performance_test.jmx
+RUN cd apache-jmeter-3.3/bin && ./jmeter.sh -n -t /Jmeter/performance_test.jmx -l jmeter_211_test10_output.csv -J jmeter.save.saveservice.url=true -J jmeter.save.saveservice.print_field_names=true -J jmeter.save.saveservice.label=true -J summariser.name=summary -J summariser.out=true
